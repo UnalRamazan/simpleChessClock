@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">chessClockDemoExtra</string>
+    <string name="upButtonName">10:00</string>//üst sayaç bilgisi
+    <string name="downButtonName">10:00</string>//alt sayaç bilgisi
+    <string name="doftdareButtonName">doftdare</string>
+    <string name="settingsButtonName">SETTINGS</string>
+    <string name="startButtonName">START</string>
+    <string name="pauseName">PAUSE</string>
+    <string name="resumeName">RESUME</string>
+    <string name="finishName">FINISH</string>
+    <string name="enterMinuteName">Enter Minute</string>
+    <string name="updateMinute">UPTADE MINUTE</string>
+    <string name="versionNumber">version: 2.0</string>
+</resources>
