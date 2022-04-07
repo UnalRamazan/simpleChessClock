@@ -7,13 +7,18 @@
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemo/app/src/main/res/layout/activity_main.xml" value="0.3625" />
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemo/app/src/main/res/layout/activity_update_minute.xml" value="0.3625" />
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1575" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable-v24/pause_icon.xml" value="0.33" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable-v24/play_icon.xml" value="0.3175" />
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable-v24/purple_custom_play_pause_icon.xml" value="0.242" />
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable-v24/purple_pause_icon.xml" value="0.242" />
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable-v24/purple_play_icon.xml" value="0.242" />
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable-v24/purple_reset_icon.xml" value="0.242" />
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable-v24/purple_settings_icon.xml" value="0.242" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable-v24/reset_icon.xml" value="0.3175" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable-v24/settings_icon.xml" value="0.3175" />
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable/big_button.xml" value="0.3505" />
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable/button.xml" value="0.3635" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable/button_design.xml" value="0.3175" />
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable/change.xml" value="0.3635" />
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable/change_play_pause.xml" value="0.3505" />
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable/custom_play_pause_icon.xml" value="0.3635" />
@@ -21,7 +26,7 @@
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable/custom_uptade_time.xml" value="0.283" />
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable/custom_uptade_time_edit_text.xml" value="0.3635" />
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable/custome_timer_icon.xml" value="0.3635" />
-        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3635" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2" />
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable/purple_timer.xml" value="0.2385" />
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable/purple_timer_icon.xml" value="0.3635" />
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable/reset_icon.xml" value="0.242" />
@@ -29,16 +34,45 @@
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable/settings.xml" value="0.2385" />
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable/settings_icon.xml" value="0.3635" />
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable/timer.xml" value="0.2385" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable/timer_icon.xml" value="0.321" />
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable/uptade_time_icon.xml" value="0.2385" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable/white_pause_icon.xml" value="0.321" />
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable/white_play_icon.xml" value="0.242" />
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable/white_reset_icon.xml" value="0.242" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable/white_return_icon.xml" value="0.321" />
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable/white_settings_icon.xml" value="0.242" />
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/drawable/white_timer_icon.xml" value="0.3635" />
-        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout/activity_main.xml" value="0.4" />
-        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout/activity_settings.xml" value="0.3625" />
-        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout/activity_update_minute.xml" value="0.3591485507246377" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout-hdpi/activity_main.xml" value="0.6" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout-hdpi/activity_settings.xml" value="0.8" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout-hdpi/activity_update_minute.xml" value="0.3625" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout-ldpi/activity_main.xml" value="1.6" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout-ldpi/activity_settings.xml" value="1.2" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout-ldpi/activity_update_minute.xml" value="1.6" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout-mdpi/activity_main.xml" value="0.8800000000000001" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout-mdpi/activity_settings.xml" value="0.8" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout-mdpi/activity_update_minute.xml" value="0.8" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout-sw600dp/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout-sw600dp/activity_settings.xml" value="0.2806451612903226" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout-sw600dp/activity_update_minute.xml" value="0.2806451612903226" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout-sw720dp/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout-sw720dp/activity_settings.xml" value="0.2806451612903226" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout-sw720dp/activity_update_minute.xml" value="0.4" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout-xhdpi/activity_main.xml" value="0.536" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout-xhdpi/activity_settings.xml" value="0.536" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout-xhdpi/activity_update_minute.xml" value="0.536" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout-xxhdpi/activity_main.xml" value="0.4" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout-xxhdpi/activity_settings.xml" value="0.3625" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout-xxhdpi/activity_update_minute.xml" value="0.3625" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout-xxxhdpi/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout-xxxhdpi/activity_settings.xml" value="0.264" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout-xxxhdpi/activity_update_minute.xml" value="0.264" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout/activity_settings.xml" value="0.176" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout/activity_update_minute.xml" value="0.176" />
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout/custome_second.xml" value="0.3625" />
         <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/layout/update_minute.xml" value="0.3625" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.176" />
+        <entry key="..\:/Users/dogan/AndroidStudioProjects/chessClockDemoExtra/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2235" />
         <entry key="..\:/Users/dogan/AndroidStudioProjects/simpleChessClockExtra/app/src/main/res/layout/activity_main.xml" value="0.17451874366767983" />
       </map>
     </option>

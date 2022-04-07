@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
     Button upButton;
     Button downButton;
     ImageButton startButton;
-    ImageButton pauseButton;
     ImageButton resetButton;
     ImageButton settingsButton;
     ImageButton updateTimeButton;
@@ -38,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean controlUp = false;
     private boolean controlDown = true;
     private boolean firstControl = true;
+    private boolean control = true;
 
     //Geriye doğru sayım işlemleri için kullanılır
     CountDownTimer countDownTimer1 = null;
@@ -58,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
         upButton = findViewById(R.id.upButton);//id'leri kullanarak ara yüzdeki nesneleri oluşturduğumuz nesnelere atadık
         downButton = findViewById(R.id.downButton);
         startButton = findViewById(R.id.startButton);
-        pauseButton = findViewById(R.id.pauseButton);
         resetButton = findViewById(R.id.resetButton);
         settingsButton = findViewById(R.id.settingsButton);
         updateTimeButton = findViewById(R.id.updateTimeButton);
@@ -70,14 +69,10 @@ public class MainActivity extends AppCompatActivity {
 
         voiceMedia = MediaPlayer.create(getApplicationContext(), R.raw.voice);
 
-        upButton.setEnabled(false);
-        downButton.setEnabled(false);
         resetButton.setEnabled(false);
-
         resetButton.setImageResource(R.drawable.white_reset_icon);
-        settingsButton.setImageResource(R.drawable.purple_settings_icon);
-        updateTimeButton.setImageResource(R.drawable.purple_timer_icon);
-
+        settingsButton.setImageResource(R.drawable.settings_icon);
+        updateTimeButton.setImageResource(R.drawable.timer_icon);
 
 
         startButton.setOnClickListener(new View.OnClickListener() {//start butonuna tıkladığımda
@@ -85,54 +80,56 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (firstControl) {
-                    firstControl = false;
-                    startCountDownTimer1();//ilk sayaç başladı
-                } else {
-                    if (controlUp) {
-                        startCountDownTimer2();
+                if (control) {
+
+                    control = false;
+
+                    if (firstControl) {
+                        firstControl = false;
+                        upButton.setEnabled(false);
+                        downButton.setEnabled(false);
+
+                        startCountDownTimer1();//ilk sayaç başladı
                     } else {
-                        startCountDownTimer1();
+                        if (controlUp) {
+                            startCountDownTimer2();
+                        } else {
+                            startCountDownTimer1();
+                        }
                     }
-                }
-                resetButton.setEnabled(true);
-                updateTimeButton.setEnabled(false);
-                settingsButton.setEnabled(false);
-                startButton.setVisibility(View.INVISIBLE);
-                pauseButton.setVisibility(View.VISIBLE);
-                //startButton.setText(R.string.pauseName);
+                    resetButton.setEnabled(true);
+                    updateTimeButton.setEnabled(false);
+                    settingsButton.setEnabled(false);
 
-                resetButton.setImageResource(R.drawable.purple_reset_icon);
-                settingsButton.setImageResource(R.drawable.white_settings_icon);
-                updateTimeButton.setImageResource(R.drawable.white_timer_icon);
-            }
-        });
-
-        pauseButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-
-                if (controlUp) {
-                    cancelCountDownTimer1();
-                    controlDown = true;
-                    controlUp = false;
+                    startButton.setImageResource(R.drawable.pause_icon);
+                    resetButton.setImageResource(R.drawable.reset_icon);
+                    settingsButton.setImageResource(R.drawable.white_settings_icon);
+                    updateTimeButton.setImageResource(R.drawable.white_timer_icon);
+                    doftdareButton.setImageResource(R.drawable.company5);
                 } else {
-                    cancelCountDownTimer2();
-                    controlDown = false;
-                    controlUp = true;
+
+                    control = true;
+
+                    if (controlUp) {
+                        cancelCountDownTimer1();
+                        controlDown = true;
+                        controlUp = false;
+                    } else {
+                        cancelCountDownTimer2();
+                        controlDown = false;
+                        controlUp = true;
+                    }
+                    updateTimeButton.setEnabled(true);
+                    resetButton.setEnabled(false);
+                    settingsButton.setEnabled(true);
+
+                    startButton.setImageResource(R.drawable.play_icon);
+                    resetButton.setImageResource(R.drawable.white_reset_icon);
+                    settingsButton.setImageResource(R.drawable.settings_icon);
+                    updateTimeButton.setImageResource(R.drawable.timer_icon);
+                    doftdareButton.setImageResource(R.drawable.company4);
                 }
-                updateTimeButton.setEnabled(true);
-                resetButton.setEnabled(false);
-                settingsButton.setEnabled(true);
 
-                startButton.setVisibility(View.VISIBLE);
-                pauseButton.setVisibility(View.INVISIBLE);
-                //startButton.setText(R.string.resumeName);
-
-                resetButton.setImageResource(R.drawable.white_reset_icon);
-                settingsButton.setImageResource(R.drawable.purple_settings_icon);
-                updateTimeButton.setImageResource(R.drawable.purple_timer_icon);
             }
         });
 
@@ -140,9 +137,21 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                if (!controlDown) {
-                    cancelCountDownTimer1();
-                    startCountDownTimer2();
+
+                if (firstControl) {
+                    firstControl = false;
+                    control = false;
+                    upButton.setEnabled(false);
+                    downButton.setEnabled(false);
+
+                    startCountDownTimer1();
+
+                    firstControl();
+                } else {
+                    if (!controlDown) {
+                        cancelCountDownTimer1();
+                        startCountDownTimer2();
+                    }
                 }
             }
         });
@@ -151,11 +160,24 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                if (!controlUp) {
-                    cancelCountDownTimer2();
-                    startCountDownTimer1();
-                }
+                if (firstControl) {
+                    firstControl = false;
+                    control = false;
+                    upButton.setEnabled(false);
+                    downButton.setEnabled(false);
 
+                    controlDown = false;
+                    controlUp = true;
+
+                    startCountDownTimer2();
+
+                    firstControl();
+                } else {
+                    if (!controlUp) {
+                        cancelCountDownTimer2();
+                        startCountDownTimer1();
+                    }
+                }
             }
         });
 
@@ -195,6 +217,31 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        getWindow().getDecorView().setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+        );
+    }
+
+    private void firstControl() {
+        resetButton.setEnabled(true);
+        updateTimeButton.setEnabled(false);
+        settingsButton.setEnabled(false);
+        startButton.setImageResource(R.drawable.pause_icon);
+        resetButton.setImageResource(R.drawable.reset_icon);
+        settingsButton.setImageResource(R.drawable.white_settings_icon);
+        updateTimeButton.setImageResource(R.drawable.white_timer_icon);
+        doftdareButton.setImageResource(R.drawable.company5);
+    }
+
     private void startCountDownTimer1() {
 
         downButton.setEnabled(true);
@@ -215,7 +262,7 @@ public class MainActivity extends AppCompatActivity {
                     String text = String.format(Locale.getDefault(), "%02d:%02d", minutes, second);
                     downButton.setText(text);
 
-                    if((((long) time * 60 * 1000) * 10) / 100 >= downTimeSecond){
+                    if ((((long) time * 60 * 1000) * 10) / 100 >= downTimeSecond) {
                         downButton.setBackgroundColor(Color.parseColor("#FF0000"));
                     }
                 }
@@ -233,6 +280,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void cancelCountDownTimer1() {
+
         downButton.setEnabled(false);
         if (!controlDown) {
             countDownTimer1.cancel();
@@ -259,7 +307,7 @@ public class MainActivity extends AppCompatActivity {
                     String text = String.format(Locale.getDefault(), "%02d:%02d", minutes, second);
                     upButton.setText(text);
 
-                    if((((long) time * 60 * 1000) * 10) / 100 >= upTimeSecond){
+                    if ((((long) time * 60 * 1000) * 10) / 100 >= upTimeSecond) {
                         upButton.setBackgroundColor(Color.parseColor("#FF0000"));
                     }
                 }
@@ -277,6 +325,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void cancelCountDownTimer2() {
+
         upButton.setEnabled(false);
         if (!controlUp) {
             countDownTimer2.cancel();
@@ -290,32 +339,34 @@ public class MainActivity extends AppCompatActivity {
             cancelCountDownTimer2();
         }
 
+        /*firstControl = true;
         controlDown = true;
         controlUp = false;
-        downButton.setEnabled(false);
-        upButton.setEnabled(false);
+        control = true;
+
         upButton.setText("10:00");
         downButton.setText("10:00");
+        //upButton.setBackgroundColor(Color.parseColor("#FF3700B3"));
+        //downButton.setBackgroundColor(Color.parseColor("#FF3700B3"));
+
         downTimeSecond = 10 * 60 * 1000;
         upTimeSecond = 10 * 60 * 1000;
-
-        startButton.setVisibility(View.VISIBLE);
-        pauseButton.setVisibility(View.INVISIBLE);
 
         updateTimeButton.setEnabled(true);
         resetButton.setEnabled(false);
         settingsButton.setEnabled(true);
-        //startButton.setText(R.string.playName);
 
+        startButton.setImageResource(R.drawable.pause_icon);
         resetButton.setImageResource(R.drawable.white_reset_icon);
-        settingsButton.setImageResource(R.drawable.purple_settings_icon);
-        updateTimeButton.setImageResource(R.drawable.purple_timer_icon);
+        settingsButton.setImageResource(R.drawable.settings_icon);
+        updateTimeButton.setImageResource(R.drawable.timer_icon);
+        doftdareButton.setImageResource(R.drawable.company4);*/
 
         Intent intent = new Intent(MainActivity.this, MainActivity.class);
         startActivity(intent);
     }
 
-    private void printMessage(){
+    private void printMessage() {
 
         voiceMedia.start();
 
@@ -348,5 +399,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void setFirstControl(boolean firstControl) {
         this.firstControl = firstControl;
+    }
+
+    public boolean isControl() {
+        return control;
+    }
+
+    public void setControl(boolean control) {
+        this.control = control;
     }
 }
